@@ -1,0 +1,64 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: url(''); */
+    background: rgba(0, 128, 0, 0.3);
+    color: rgb(102, 67, 67);
+    margin: 0;
+}
+
+h1{
+    font-size: 45px;
+    /* margin-bottom: 1rem; */
+}
+
+.checker{
+    margin: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#searchbox{
+    /* margin-bottom: 3rem; */
+    width: 240px;
+    border-radius: 10px;
+    padding: .7rem;
+    border: 1px solid white;
+}
+
+#mybtn{
+    width: 150px;
+	padding: 5px;
+	margin: 6% auto;
+	border:none;
+	background-color: #7e8892;
+	color: #fff;
+	border-radius: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+	
+}
+
+#check-value{
+   background-color: rgb(240, 69, 69);
+   color: white;
+   font-size: 20px;
+   font-weight: bold;
+  
+}
+
+/* @media ( max-width: 768px){
+	
+    .checker{
+        max-width: 1000px;
+    }
+} */
