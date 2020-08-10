@@ -55,6 +55,14 @@ h1{
    font-weight: bold;
   
 }
+#title{
+    display: none;
+}
+
+#title #searchtitle{
+    font-weight: bold;
+    font-size: 20px;
+}
 
 /* @media ( max-width: 768px){
 	

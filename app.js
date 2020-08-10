@@ -19,7 +19,10 @@ let getRecipe =(e)=>{
       .then(data => {
         console.log(data);
 
-        title.innerHTML =`<h3>${mySearch} results:`
+        
+        title.style.display='block';
+        title=searchTitle.innerHTML;
+
       });
 
     }else{
@@ -49,6 +52,7 @@ let getRecipe =(e)=>{
    const title =document.getElementById('title');
    const  myRecipe = document.getElementById('myrecipe');
    const checkValue = document.getElementById('check-value');
+   const searchTitle =document.getElementById('searchtitle');
 
 //event lkstener
 // myBtn.addEventListener('click', console.log('hi'));
