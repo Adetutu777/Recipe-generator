@@ -18,8 +18,6 @@ let getRecipe =(e)=>{
       .then(res=>res.json())
       .then(data => {
         console.log(data);
-
-        
         title.style.display='block';
         title=searchTitle.innerHTML;
 
@@ -35,13 +33,6 @@ let getRecipe =(e)=>{
     // (mySearch.trim() ? "fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mySearch}`)"
     // .then(res=>res.json())
     // .then(data => {console.log(data)}) : 'please enter a value');
-
-
-
-    
-
-   
-   
 
 
 }
