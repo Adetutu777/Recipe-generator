@@ -21,12 +21,20 @@ let getRecipe =(e)=>{
         title.style.display='block';
         title=searchTitle.innerHTML;
 
+        if(data.meals === null){
+          title.innerHTML =`<p> try aain<p>`;
+        }else{
+
+        }
+
       });
 
     }else{
       checkValue.classList.add("error");
       console.log('please type in a meal');
       checkValue.innerHTML ='please type in a meal';
+      
+
     }
 
     // trying ternary operator
