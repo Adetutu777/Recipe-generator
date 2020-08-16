@@ -19,6 +19,16 @@ h1{
     /* margin-bottom: 1rem; */
 }
 
+
+.img-after-result{
+width: 20%;
+}
+
+.result-div{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .checker{
     margin: auto;
     padding-top: 1rem;
@@ -116,7 +126,10 @@ h1{
     align-items: center;
     justify-content: center;
     font-style: italic;
-    
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+   
 }
 
 
