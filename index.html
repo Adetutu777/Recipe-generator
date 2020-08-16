@@ -9,10 +9,13 @@
    
 </head>
 <body>
+    <!-- <img src="" alt="" srcset=""> -->
     <div class="checker">
-    <h1>Recipe Generator</h1>
+        
+    <!-- <h1>Recipe Generator</h1> -->
+    <img src="my image.png" alt="profile image">
 
-    <div class="mealbox">
+    <div class="mealbox" id="mealbox">
         <form>
             <p id ='check-value'></p>
             <input type="text" id="searchbox" placeholder="type in meal">
@@ -25,11 +28,17 @@
     
 
 <div class="title" id="title">
-    <p id="searchtitle">Search results:</p>
+    <!-- <p id="searchtitle">Search results:</p> -->
 </div>
 <div class="recipe" id="myrecipe"></div>
-
+<div class="meals"></div>
+<div class="nully-resp" id="nully-resp">
+    <p class="search" id="search">No result found,try something else</p>
 </div>
+<button type="submit" class="getbtn" id="btnrelod" onclick="reloadFunc()">search another meal</button>
+</div>
+
+
 
 <script src="app.js"></script>
 

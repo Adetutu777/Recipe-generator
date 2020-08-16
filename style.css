@@ -6,7 +6,10 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* background: url(''); */
-    background: rgba(0, 128, 0, 0.3);
+    /* background: rgba(0, 128, 0, 0.3); */
+    /* background: rgb(37, 25, 25); */
+    background: rgb(164, 164, 189);
+    /* background: black; */
     color: rgb(102, 67, 67);
     margin: 0;
 }
@@ -35,7 +38,8 @@ h1{
     border: 1px solid white;
 }
 
-#mybtn{
+#mybtn,
+#btnrelod{
     width: 150px;
 	padding: 5px;
 	margin: 6% auto;
@@ -65,9 +69,55 @@ h1{
     font-size: 20px;
 }
 
-/* @media ( max-width: 768px){
-	
-    .checker{
-        max-width: 1000px;
-    }
-} */
+.recipe{
+    /* margin-top: 5rem; */
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap: .8rem;
+    
+} 
+.meal-desc{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.2);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+  .img-meal{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+
+}  
+
+  .img-meal img{
+    height:100%;
+    width: 100%;
+    border: 4px solid whitesmoke;
+    border-radius: 5px;
+    
+}  
+
+.nully-resp{
+    display: none;
+}
+
+.search{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    
+}
+
+
+
