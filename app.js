@@ -27,14 +27,14 @@ let getRecipe =(e)=>{
       //   }
       // })
       .then(res=>res.json())
-      .then(data => {
-        console.log(data);
+      .then(input => {
+        console.log(input);
         // title.style.display='block';
         // title = myRecipe.innerHTML;
 
      
 
-        if(data.meals ===null){
+        if (input.meals==null){
           console.log('no result')
           
           nullResp.style.display = 'block';
@@ -42,7 +42,7 @@ let getRecipe =(e)=>{
          
 
         }else{
-          myRecipe.innerHTML=data.meals.map(meal=>`
+          myRecipe.innerHTML=input.meals.map(meal=>`
           <div class ='img-meal'>
           <img src = '${meal.strMealThumb}' alt ='${meal.strMeal}'/>
          <div class='meal-desc' />
@@ -68,13 +68,21 @@ let getRecipe =(e)=>{
 
 }
 
+
+let mealCont =(e)=>{
+
+
+
+
+}
+
 // let enterSrch =()=>{
 //   mealBox.style.display = 'none';
 // }
 // let reloadFunc = () => location.reload();
 
 // dom events
-let count =0;
+// let count =0;
 const mealBox = document.getElementById('mealbox');
   const searchBox=document.getElementById('searchbox');
   const myBtn = document.getElementById('mybtn');
@@ -87,4 +95,5 @@ const mealBox = document.getElementById('mealbox');
 
 //event listener
 myBtn.addEventListener('click',  getRecipe);
+myRecipe.addEventListener('click', mealCont);
      
