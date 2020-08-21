@@ -1,52 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Recipe generator</title>
-   
-</head>
-<body>
-    <!-- <img src="" alt="" srcset=""> -->
+  </head>
+  <body>
+  
     <div class="checker">
-    <div class="logobox">
-    <img src="my image.png" alt="profile image">
-    
-    <p class="intro">No one is born great to cook, one learns by doing <br> 
-    type any of your desire meals below <br>
-& get the step to getting your desired result </p>
+      <div class="logobox">
+        <img src="my image.png" width="420px" alt="profile image" />
 
-    <div class="mealbox" id="mealbox">
-        <form>
-            <p id ='check-value'></p>
-            <input type="text" id="searchbox" placeholder="type in meal">
-        </form>
-         
-        <button type="submit" class="getbtn" id="mybtn">search</button>
-        <button type="submit" class="getbtn" id="mybtn">random meal</button>
-        
+        <p class="intro">
+          Good food is good mood, <br>
+          browse through over 200,000 delicious recipes.
+        </p>
+
+        <div class="mealbox" id="mealbox">
+          <form>
+            <p id="check-value"></p>
+            <input type="text" id="searchbox" placeholder="type in meal" />
+          </form>
+
+          <button type="submit" class="getbtn" id="mybtn">search</button>
+     
+        </div>
+      </div>
+
+      <div class="title" id="title">
+        <!-- <p id="searchtitle">Search results:</p> -->
+      </div>
+      <div class="recipe" id="myrecipe"></div>
+      <!-- <div class="meals"></div> -->
+      <div class="nully-resp" id="nully-resp">
+        <p class="search" id="search">No result found,try something else</p>
+      </div>
     </div>
-   
-    </div>
+    <button id="direction-btn">Back to results</button>
+    <!-- <button onclick="goBack()">Go Back</button> -->
+    <div id="meal-full-details"></div>
 
-    
-
-<div class="title" id="title">
-    <!-- <p id="searchtitle">Search results:</p> -->
-</div>
-<div class="recipe" id="myrecipe"></div>
-<div class="meals"></div>
-<div class="nully-resp" id="nully-resp">
-    <p class="search" id="search">No result found,try something else</p>
-</div>
-<!-- <button type="submit" class="getbtn" id="btnrelod" onclick="reloadFunc()">search another meal</button> -->
-</div>
-
-
-
-<script src="app.js"></script>
-
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

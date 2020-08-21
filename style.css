@@ -34,7 +34,7 @@ width: 20%;
     justify-content: flex-start;
 }
 
-.checker{
+.checker,#direction-btn{
     margin: auto;
     padding-top: 1rem;
     display: flex;
@@ -53,8 +53,8 @@ width: 20%;
     border: 1px solid white;
 }
 
-#mybtn
-{
+#mybtn,
+#direction-btn{
     width: 120px;
 	padding: 5px;
 	margin: 6% auto;
@@ -137,5 +137,16 @@ width: 20%;
    
 }
 
+.cookIns{
+    color: black;
+    font-style: italic;
+}
 
+.MealIns{
+    font-size: 15px;
+    /* border: .1px solid red; */
+}
 
+#direction-btn{
+    display: none;
+}
