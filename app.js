@@ -102,16 +102,15 @@ let fullMeals = (e) => {
   <div class='list'>
     <h2 class ='cookIns'>Ingredients</h2>
     <ul>
-    <li>${ingMesh.ing ? `<p>${ingMesh.ing}</li> </p>`: ''}
+  ${ingMesh.ing ? `<p>${ingMesh.ing} </p>`: ''}
    
     </ul>
 
     </div>
 
     <div class='main'>
-    <h2 class ='cookIns'>Measurements</h2>
-    <ul>
-    ${ingMesh.measure ? `<p>${ingMesh.measure}</p>`: ''}
+    
+    
      
     </ul>
     <h2 class ='cookIns'>Cooking Instructions:</h2>
