@@ -30,7 +30,7 @@ let displayRes = () => {
          </div>
         
           `
-  );
+  ).join('')
 };
 
 let noResult = () => {
@@ -89,7 +89,7 @@ let fullMeals = (e) => {
 
   console.log('my ingredients', ingMesh);
   
-  myRecipe.innerHTML = `
+  myRecipe.innerHTML= `
   <div class ='my-inst'>
   <img src = '${currentMeal.strMealThumb}' alt ='${currentMeal.strMeal}'/>
   <h2 class ='cookIns'>Category:</h2>
@@ -99,7 +99,7 @@ let fullMeals = (e) => {
  
   
 
-  <div class='main'>
+  <div class='list'>
     <h2 class ='cookIns'>Ingredients</h2>
     <ul>
     <li>${ingMesh.ing ? `<p>${ingMesh.ing}</li> </p>`: ''}

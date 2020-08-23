@@ -25,6 +25,10 @@ h1{
     font-style: italic;
 }
 
+.intropix{
+margin-top:2rem;
+}
+
 .img-after-result{
 width: 20%;
 }
@@ -89,8 +93,10 @@ width: 20%;
     display: grid;
     grid-template-columns:repeat(3,1fr);
     grid-gap: .8rem;
+    color: rgb(122, 86, 19);
     
 } 
+
 .meal-desc{
     position: absolute;
     top: 0;
