@@ -11,6 +11,7 @@ let getRecipe = (e) => {
         .then((i) => i.json())
         .then((r) => (mealArray = [...r.meals]))
         .then((l) => displayUI());
+        // title.innerHTML=`<h2>Search results for '${mySearch}'</h2>`
 };
 
 let displayRes = () => {

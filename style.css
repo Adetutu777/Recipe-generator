@@ -157,10 +157,23 @@ width: 20%;
    
 }
 
+.meal-full-details{
+margin: 30px auto;
+width: 50%;
+}
+
+.meal-full-details img{
+    width: 100px;
+    margin: 15px;
+    border: 4px wheat solid;
+    border-radius: 2px;
+}
+
 .cookIns{
     color: black;
     font-style: italic;
 }
+
 
 .MealIns{
     font-size: 15px;
