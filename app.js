@@ -2,20 +2,56 @@ const searchBox = document.getElementById('searchbox');
 //console.log(searchBox)
 let mealArray = [];
 
+
+let errIndicator=''
 let getRecipe = (e) => {
+
   let mySearch = searchBox.value;
   e.preventDefault();
-  mealArray === null
-    ? errorFunc()
-    : fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mySearch}`)
-        .then((i) => i.json())
-        .then((r) => (mealArray = [...r.meals]))
-        .then((l) => displayUI());
-       
+
+  //Check if user do not enter any value
+  if (mySearch.length ===0){
+    errorFunc()
+    return;
+  }
+
+  // check id user input less than 2 characters
+  if (mySearch.length <=2){
+    checkValue.innerHTML='meal name too short, try another search'
+    return;
+  }
+   spinnerLoading();
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mySearch}`)
+ 
+    .then((i) => i.json())
+    .then((r) => (() => {
+              //check if the returned data is null
+              errIndicator= r;
+            mealArray = [...r.meals];
+            displayUI();
+           
+          })()
+    )
+   
+   .finally(f =>{
+    spinnerFinish() 
+    // if returned data is null let user know meal cannt be found
+    if(errIndicator.meals===null){
+      checkValue.innerHTML =`${searchbox.value} not found, try another search`
+      searchBox.value = '';
+    }
+
+   })
+        
 };
 
+
+
+
+  //add slice method to display  max  9 results 
+  //irrespective of what is gotten from the api
 let displayRes = () => {
-  myRecipe.innerHTML = mealArray.map(
+  myRecipe.innerHTML = mealArray.slice(0, 9).map(
     (meal, index) => `
         <div class ='img-meal'>
         <img src = '${meal.strMealThumb}' alt ='${meal.strMeal}'/>
@@ -44,6 +80,17 @@ let errorFunc = () => {
   console.log('please type in a meal');
   checkValue.innerHTML = 'please type in a meal';
 };
+
+
+//let user know meal not found
+let invalidInput =()=>{
+    checkValue.classList.add('error');
+  checkValue.innerHTML = 'Meal not found, try another search';
+  spinnerEnd()
+  return;
+
+}
+
 
 let displayUI = () => {
   searchBox.value = '';
@@ -125,7 +172,22 @@ const nullResp = document.getElementById('nully-resp');
 const fullMeal = document.getElementById('meal-full-details');
 //const fullMealBtn = document.getElementById('full-details');
 const directionBtn = document.getElementById('direction-btn');
-
+const loadingCont = document.getElementById('container');
 //event listener
 myBtn.addEventListener('click', getRecipe);
 
+
+//instantiate loadind
+let spinnerLoading = () => {
+  checkValue.innerHTML=''
+  myRecipe.innerHTML ='';
+mybtn.classList.add('hide');
+ loadingCont.classList.remove('hide'); 
+}
+
+//remove loading
+let spinnerFinish=()=>{
+   loadingCont.classList.add('hide');
+ mybtn.classList.remove('hide');
+}
+loadingCont.classList.add('hide'); 
