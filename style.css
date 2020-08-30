@@ -213,3 +213,56 @@ width: 20%;
 .youlink{
     color: wheat;
 }
+
+
+
+
+
+
+.show{
+    display:block;
+}
+
+.hide{
+    display:none;
+}
+#mybtn:hover{
+    cursor:pointer;
+    opacity: .7;
+}
+#container {
+  
+    background:white;
+  width: 2.6rem;
+  height: 2.6rem;
+  box-shadow:0 25px 50px -12px;
+  margin:1rem auto;
+  border-radius:50%;
+  padding:.3rem;
+}
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -105;
+  }
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -160;
+  }
+  100% {
+    stroke-dasharray: 1 98;
+    stroke-dashoffset: -300;
+  }
+}
+
+#spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 1.2s;
+  animation-timing-function: cubic-bezier;
+  animation-iteration-count: infinite;
+}
+
+
+
