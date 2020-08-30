@@ -11,7 +11,7 @@ let getRecipe = (e) => {
         .then((i) => i.json())
         .then((r) => (mealArray = [...r.meals]))
         .then((l) => displayUI());
-        // title.innerHTML=`<h2>Search results for '${mySearch}'</h2>`
+       
 };
 
 let displayRes = () => {
@@ -49,19 +49,9 @@ let displayUI = () => {
   searchBox.value = '';
   displayRes();
   directionBtn.style.display='block';
+  // title.innerHTML=`<h2>Search results for '${mySearch}'</h2>`
 };
 
-// let fullMeals = (e) => {
-//   let currentMeal = mealArray[e.value];
-//   myRecipe.innerHTML = `
-//   <div class ='my-inst'>
-//   <img src = '${currentMeal.strMealThumb}' alt ='${currentMeal.strMeal}'/>
-//   <h2 class ='cookIns'>Cooking Instructions</h2>
-//   <h3 class ='MealIns'> ${currentMeal.strInstructions}</h3>
-     
-// </div>
-//   `;
-// };
 
 let ingMesh = {
   ing: [],
@@ -92,39 +82,26 @@ let fullMeals = (e) => {
   
   myRecipe.innerHTML= `
   <div class ='my-inst'>
-  <img src = '${currentMeal.strMealThumb}' alt ='${currentMeal.strMeal}'/>
+  <h4>${currentMeal.strMeal}</h4>
+  <img src = '${currentMeal.strMealThumb}' class='mymeal' alt ='${currentMeal.strMeal}'/>
+
+  <div class = 'my-inst-info'>
   <h2 class ='cookIns'>Category:</h2>
-  <h5> ${currentMeal.strCategory}</h3>
+  <h5 class='MealIns'> ${currentMeal.strCategory}</h3>
+
   <h2 class ='cookIns'>Area:</h2>
-  <h5> ${currentMeal.strArea}</h3>
- 
-  
+  <h5 class='MealIns'> ${currentMeal.strArea}</h3>
 
-  <div class='list'>
     <h2 class ='cookIns'>Ingredients</h2>
-    <ul>
-  ${ingMesh.ing ? `<p>${ingMesh.ing} </p>`: ''}
-   
-    </ul>
+ <h4 class='MealIns'> ${ingMesh.ing ? `<p>${ingMesh.ing} </p>`: ''}</h4>
 
-    </div>
-
-    <div class='main'>
-    
-    
-     
-    </ul>
     <h2 class ='cookIns'>Cooking Instructions:</h2>
-    <h4 class ='MealIns'> ${currentMeal.strInstructions}</h3>
+    <h4 class ='MealIns'> ${currentMeal.strInstructions}</h4>
+
+    <h2 class='cookIns'>Click link below for youtube description</h2>
+    <p class='MealIns'><a class ='youlink' href='${currentMeal.strYoutube}'class='link'>${currentMeal.strYoutube}</a></p>
     </div>
-
-    <h2>Click link below for youtube description</h2>
-    <p><a href='${currentMeal.strYoutube}'class='link'>${currentMeal.strYoutube}</a></p>
-    
-    
-    
-
-
+    </div>
 
   ` 
 };
@@ -133,14 +110,9 @@ let hideBtn= (e) => {
 
   myRecipe.style.display='none';
   fullMeal.style.display='block';
-
-
+  loadingspinner.style.display='block'
 
 }
-
-
-
-
 
 const mealBox = document.getElementById('mealbox');
 const myBtn = document.getElementById('mybtn');
@@ -156,5 +128,4 @@ const directionBtn = document.getElementById('direction-btn');
 
 //event listener
 myBtn.addEventListener('click', getRecipe);
-//fullMealBtn.addEventListener('click', fullMeals);
-// myRecipe.addEventListener('click', mealCont);
+
